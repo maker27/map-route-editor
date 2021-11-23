@@ -37,27 +37,6 @@ const usePointCoordinates: TUsePointCoordinates = () => {
                 zoomMargin: [10, 20]
             });
         }
-
-        /*
-        const multiRoute = new api.multiRouter.MultiRoute(
-            {
-                referencePoints: placemarks.map(point => point.coord),
-                params: {
-                    routingMode: 'pedestrian'
-                }
-            },
-            {
-                boundsAutoApply: true,
-                wayPointVisible: false,
-                routeActiveStrokeWidth: 0
-            }
-        );
-        //multiRoute.model.setReferencePoints(placemarks.map(point => point.coord));
-
-        const { geoObjects } = map;
-        geoObjects.removeAll();
-        if (placemarks.length > 1) geoObjects.add(multiRoute);
-*/
     }, [placemarks, apiRef, mapRef]);
 
     const getPointInfo: TGetPointInfo = useCallback(
@@ -107,7 +86,6 @@ const usePointCoordinates: TUsePointCoordinates = () => {
                               }
                           ];
                 });
-                //return map.panTo(coord);
             }
         },
         [apiRef, mapRef, setPlacemarks, getPointInfo]
