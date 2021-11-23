@@ -1,0 +1,42 @@
+.route {
+    &-list {
+        overflow-y: auto;
+        padding-right: 1rem;
+        font-size: 1.6rem;
+        counter-reset: points;
+    }
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        &:before {
+            counter-increment: points;
+            content: counter(points);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2em;
+            height: 2em;
+            padding: 1rem;
+            border-radius: 50%;
+            border: 1px solid gray;
+            text-align: center;
+        }
+    }
+}
+
+.remove {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    border: 1px solid #000;
+    cursor: pointer;
+
+    &:before {
+        content: "\274C";
+    }
+}

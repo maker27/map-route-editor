@@ -28,11 +28,10 @@ const config: webpack.Configuration = {
             },
             {
                 test: /\.(png|jpe?g|gif|webp|ico|svg)$/i,
-                use: [
-                    {
-                        loader: 'file-loader'
-                    }
-                ]
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[name].[ext]'
+                }
             }
         ]
     },
