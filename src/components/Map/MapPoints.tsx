@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useCallback, useContext } from 'react';
 import '../../images/marker.svg';
 import { Placemark } from 'react-yandex-maps';
 import { MapEvent } from 'yandex-maps';
@@ -14,19 +14,22 @@ const MapPoints: React.FC<IMapPointsProps> = ({ template }) => {
     const { placemarks, setPlacemarks } = useContext(Context);
     const { getPointInfo } = usePointCoordinates();
 
-    const onDragEnd = (index: number) => (e: MapEvent) => {
-        if (!setPlacemarks) return;
-        const coords = e.get('target').geometry.getCoordinates();
-        getPointInfo(coords).then(pointInfo => {
-            if (pointInfo) {
-                setPlacemarks(prevPlacemarks => {
-                    const newPlacemarks = [...prevPlacemarks];
-                    newPlacemarks[index] = pointInfo;
-                    return newPlacemarks;
-                });
-            }
-        });
-    };
+    const onDragEnd = useCallback(
+        (index: number) => (e: MapEvent) => {
+            if (!setPlacemarks) return;
+            const coords = e.get('target').geometry.getCoordinates();
+            getPointInfo(coords).then(pointInfo => {
+                if (pointInfo) {
+                    setPlacemarks(prevPlacemarks => {
+                        const newPlacemarks = [...prevPlacemarks];
+                        newPlacemarks[index] = pointInfo;
+                        return newPlacemarks;
+                    });
+                }
+            });
+        },
+        [setPlacemarks, getPointInfo]
+    );
 
     return (
         <>
