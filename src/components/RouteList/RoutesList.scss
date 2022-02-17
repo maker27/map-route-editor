@@ -1,11 +1,11 @@
 .route {
     &-list {
-        overflow-y: auto;
         padding-right: 1rem;
         font-size: 1.6rem;
         border: 1px solid #e0e0e0;
         border-radius: 2px;
         counter-reset: points;
+        overflow: hidden auto;
 
         &:empty {
             border: 0;
@@ -20,6 +20,10 @@
         border-bottom: 1px solid #e0e0e0;
         color: #26a69a;
         cursor: move;
+
+        &:hover {
+            background: rgba(43, 187, 173, 0.2);
+        }
 
         &:last-child {
             border-bottom: 0;
