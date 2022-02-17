@@ -2,7 +2,7 @@ import React from 'react';
 import './Sidebar.scss';
 import classNames from 'classnames';
 import RouteForm from '../RouteForm';
-import RouteList from '../RoutesList';
+import RouteList from '../RouteList';
 import Warning from '../Warning';
 import { IClassnameComponentProps } from '../../assets/types';
 

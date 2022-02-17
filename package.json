@@ -6,7 +6,10 @@
     "build": "webpack --config webpack.prod.config.ts"
   },
   "dependencies": {
+    "immutability-helper": "^3.1.1",
     "react": "^17.0.1",
+    "react-dnd": "^14.0.4",
+    "react-dnd-html5-backend": "^14.0.2",
     "react-dom": "^17.0.1",
     "react-yandex-maps": "^4.6.0",
     "ymaps": "^0.2.1"

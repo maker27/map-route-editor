@@ -13,7 +13,7 @@ const mapState = {
     center: [55.76, 37.64],
     zoom: 11,
     controls: ['fullscreenControl'],
-    behaviors: ['scrollZoom']
+    behaviors: ['drag', 'scrollZoom']
 };
 
 const MapWrapper: React.FC<IClassnameComponentProps> = ({ className }) => {
