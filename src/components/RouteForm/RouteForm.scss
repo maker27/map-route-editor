@@ -1,6 +1,6 @@
 .route-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 1rem 0 2rem;
 
@@ -12,17 +12,18 @@
     }
 
     &__button {
+        height: 36px;
+        margin: 0 0.5rem 0.5rem 0;
+        padding: 0 16px;
+        border: none;
+        border-radius: 2px;
         background-color: #26a69a;
         color: #fff;
         letter-spacing: 0.5px;
-        border: none;
-        border-radius: 2px;
-        height: 36px;
-        line-height: 36px;
-        padding: 0 16px;
         text-transform: uppercase;
         cursor: pointer;
         transition: background-color 0.3s ease-out;
+        white-space: nowrap;
 
         &:hover {
             background-color: #2bbbad;
@@ -32,7 +33,14 @@
 
         &:before,
         &:after {
+            display: inline-block;
             vertical-align: middle;
+        }
+        &:before {
+            width: 1em;
+            font-weight: 900;
+            font-size: 2rem;
+            margin-right: 0.8rem;
         }
     }
 }
@@ -47,14 +55,9 @@
 }
 .button-save {
     &:before {
-        content: "Сохранить маршрут";
-    }
-    &:after {
         content: "\1F4BE";
     }
-}
-.button-load:before,
-.button-save:after {
-    font-weight: 900;
-    font-size: 2rem;
+    &:after {
+        content: "Сохранить маршрут";
+    }
 }
