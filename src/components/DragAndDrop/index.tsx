@@ -1,6 +1,8 @@
 import React, { Dispatch, SetStateAction, useCallback } from 'react';
 import { DraggableItem } from './DraggableItem';
 import update from 'immutability-helper';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 type DragDropWrapperProps<T> = {
     className?: string;
@@ -38,7 +40,11 @@ function DragDropWrapper<T>({
         );
     };
 
-    return <div className={className}>{nodes.map(renderItem)}</div>;
+    return (
+        <DndProvider backend={HTML5Backend}>
+            <div className={className}>{nodes.map(renderItem)}</div>
+        </DndProvider>
+    );
 }
 
 export default DragDropWrapper;
