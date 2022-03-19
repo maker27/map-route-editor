@@ -45,7 +45,7 @@ const MapPoints: React.FC<IMapPointsProps> = ({ template }) => {
                             zIndexHover: 9,
                             balloonContentLayout: template,
                             iconLayout: 'default#imageWithContent',
-                            iconImageHref: '/images/marker.svg',
+                            iconImageHref: 'images/marker.svg',
                             iconImageSize: [48, 48],
                             iconImageOffset: [-26, -47],
                             iconContentOffset: [19, 9]
