@@ -10,9 +10,7 @@ const RouteItem: React.FC<IRouteItemProps> = ({ name, index, onRemovePoint }) =>
     return (
         <div className="route-item" data-index={index}>
             {name}
-            <span className="remove" title="Удалить" onClick={onRemovePoint}>
-                {' '}
-            </span>
+            <span className="route-item__remove" title="Удалить" onClick={onRemovePoint} />
         </div>
     );
 };

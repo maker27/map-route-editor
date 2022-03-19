@@ -1,13 +1,2 @@
-import React, { useContext } from 'react';
-import Context from '../../context';
-import { IClassnameComponentProps } from '../../assets/types';
-import classNames from 'classnames';
-import './Warning.scss';
-
-const Warning: React.FC<IClassnameComponentProps> = ({ className }) => {
-    const { warning } = useContext(Context);
-
-    return warning ? <div className={classNames(className, 'warning')}>{warning}</div> : null;
-};
-
+import Warning from './Warning';
 export default Warning;

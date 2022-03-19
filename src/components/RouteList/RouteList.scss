@@ -42,23 +42,23 @@
             border: 1px solid #e4e4e4;
             text-align: center;
         }
-    }
-}
 
-.remove {
-    flex: 0 0 1.6rem;
-    height: 1.6rem;
-    margin-left: 0.7rem;
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    border: 1px solid #e4e4e4;
-    border-radius: 2px;
-    cursor: pointer;
+        &__remove {
+            flex: 0 0 1.6rem;
+            height: 1.6rem;
+            margin-left: 0.7rem;
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            border: 1px solid #e4e4e4;
+            border-radius: 2px;
+            cursor: pointer;
 
-    &:hover {
-        color: red;
-    }
-    &:before {
-        content: "\274C";
+            &:hover {
+                color: red;
+            }
+            &:before {
+                content: "\274C";
+            }
+        }
     }
 }

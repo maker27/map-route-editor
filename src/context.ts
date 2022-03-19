@@ -12,7 +12,7 @@ interface IContextProps {
     setWarning?: TSetState<string>;
 }
 
-const defaultContextValue = {
+export const defaultContextValue = {
     apiRef: { current: undefined },
     mapRef: { current: undefined },
     inputRef: { current: null },

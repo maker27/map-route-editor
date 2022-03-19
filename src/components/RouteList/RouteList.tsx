@@ -1,5 +1,5 @@
 import React, { useCallback, useContext } from 'react';
-import './RoutesList.scss';
+import './RouteList.scss';
 import { TPlacemark } from '../../assets/types';
 import Context from '../../context';
 import usePointCoordinates from '../../hooks/usePointCoordinates';
@@ -24,7 +24,7 @@ const RouteList: React.FC = () => {
             items={placemarks}
             setItems={setPlacemarks}
             nodes={placemarks.map(({ name }: TPlacemark, i) => (
-                <RouteItem key={i} name={name} index={i} onRemovePoint={onRemovePoint} />
+                <RouteItem key={name} name={name} index={i} onRemovePoint={onRemovePoint} />
             ))}
         />
     );
