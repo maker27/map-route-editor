@@ -1,3 +1,5 @@
+[Demo](https://maker27.github.io/map-route-editor/)
+
 ### Task Description
 
 Необходимо реализовать редактор маршрутов — одностраничное приложение, в
