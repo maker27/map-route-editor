@@ -29,6 +29,8 @@ describe('<RouteList/>', () => {
 
         const items = container.getElementsByClassName('route-form__button');
         expect(items.length).toBe(2);
+        expect(items[0]).toBeEnabled();
+        expect(items[1]).toBeDisabled();
     });
 
     test('renders input', () => {

@@ -21,12 +21,15 @@ const RouteForm: React.FC = () => {
 
     return (
         <div className="route-form">
-            <button className="route-form__button button-load" onClick={() => loadPlacemarks(setPlacemarks)}>
-                {' '}
-            </button>
-            <button className="route-form__button button-save" onClick={() => savePlacemarks(placemarks)}>
-                {' '}
-            </button>
+            <button
+                className="route-form__button button-load"
+                onClick={() => loadPlacemarks(setPlacemarks)}
+            />
+            <button
+                className="route-form__button button-save"
+                disabled={placemarks.length === 0}
+                onClick={() => savePlacemarks(placemarks)}
+            />
             <input
                 className="route-form__input"
                 ref={inputRef}
